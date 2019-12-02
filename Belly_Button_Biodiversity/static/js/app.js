@@ -1,3 +1,9 @@
+d3.select("#selDataset").on("change", function(){
+  var sample = d3.event.target.value;
+  console.log(sample);
+});
+
+
 function buildMetadata(sample) {
 
   // @TODO: Complete the following function that builds the metadata panel
@@ -18,13 +24,22 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
 
   // @TODO: Use `d3.json` to fetch the sample data for the plots
+    d3.select("#selDataset").on("change", function(){
+      var sample = d3.event.target.value;
+      console.log(sample);
+    });
+    // var url = `/samples/${sample}`
 
     // @TODO: Build a Bubble Chart using the sample data
 
     // @TODO: Build a Pie Chart
     // HINT: You will need to use slice() to grab the top 10 sample_values,
     // otu_ids, and labels (10 each).
-}
+
+
+
+
+
 
 function init() {
   // Grab a reference to the dropdown select element
